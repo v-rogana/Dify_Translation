@@ -11,7 +11,6 @@ dify-translator/
 │   ├── split_text.py          # Quebra o arquivo de entrada em chunks.
 │   ├── send_to_api.py         # Envia os chunks para tradução pela API.
 │   ├── concat_md.py           # Concatena os arquivos traduzidos em um único arquivo .md.
-│   ├── md_to_docx.py          # Converte o arquivo .md final para .docx.
 │
 ├── data/
 │   ├── input/                 # Pasta para os arquivos de texto a serem traduzidos.
