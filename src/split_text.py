@@ -52,7 +52,7 @@ def split_text_into_chunks(txt_path, output_folder, min_words=300, max_words=600
     print(f"Texto dividido em {len(chunks)} chunks e salvo em {output_folder}")
 
 if __name__ == "__main__":
-    txt_path = os.path.join(os.path.dirname(__file__), "..", "data", "input", "Principles_of_Psicology.txt")
+    txt_path = os.path.join(os.path.dirname(__file__), "..", "data", "input", "teste.txt")
     output_folder = os.path.join(os.path.dirname(__file__), "..", "data", "output", "chunks")
 
     split_text_into_chunks(txt_path, output_folder)

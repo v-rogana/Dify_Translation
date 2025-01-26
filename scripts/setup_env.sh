@@ -1,50 +1,46 @@
-# Abortar se houver erro
-Set-StrictMode -Version Latest
+#!/bin/bash
+
+#!/bin/bash
+
+# Abortar se qualquer comando falhar
+set -e
 
 # Diretório base (assume que o script está no diretório scripts/)
-$BASE_DIR = Split-Path -Parent $MyInvocation.MyCommand.Definition
-$PROJECT_DIR = Join-Path $BASE_DIR ".."
+BASE_DIR=$(dirname "$(realpath "$0")")
+PROJECT_DIR=$(realpath "$BASE_DIR/..")
 
 # Criar ambiente virtual
-$VENV_DIR = Join-Path $PROJECT_DIR "venv"
-if (-Not (Test-Path $VENV_DIR)) {
-    Write-Host "Criando ambiente virtual..."
-    python -m venv $VENV_DIR
-} else {
-    Write-Host "Ambiente virtual já existe."
-}
+if [ ! -d "$PROJECT_DIR/venv" ]; then
+  echo "Criando ambiente virtual..."
+  /c/Users/victo/AppData/Local/Programs/Python/Python313/python.exe -m venv "$PROJECT_DIR/venv"
+else
+  echo "Ambiente virtual já existe."
+fi
 
-# Ativar o ambiente virtual
-$ACTIVATE_SCRIPT = Join-Path $VENV_DIR "Scripts\Activate.ps1"
-if (-Not (Test-Path $ACTIVATE_SCRIPT)) {
-    Write-Error "Erro: Não foi possível localizar o script de ativação do ambiente virtual."
-    Exit 1
-}
-
-Write-Host "Ativando o ambiente virtual..."
-& $ACTIVATE_SCRIPT
+# Ativar ambiente virtual (ajuste para Windows)
+if [[ "$OSTYPE" == "msys" ]]; then
+  source "$PROJECT_DIR/venv/Scripts/activate"
+else
+  source "$PROJECT_DIR/venv/bin/activate"
+fi
 
 # Atualizar pip
-Write-Host "Atualizando pip..."
 pip install --upgrade pip
 
 # Instalar dependências
-Write-Host "Instalando dependências do requirements.txt..."
-$REQUIREMENTS_FILE = Join-Path $PROJECT_DIR "requirements.txt"
-pip install -r $REQUIREMENTS_FILE
+pip install -r "$PROJECT_DIR/requirements.txt"
 
 # Configurar pastas de dados
-Write-Host "Criando pastas de dados..."
-$DATA_DIR = Join-Path $PROJECT_DIR "data"
-$INPUT_DIR = Join-Path $DATA_DIR "input"
-$OUTPUT_DIR = Join-Path $DATA_DIR "output"
-$CHUNKS_DIR = Join-Path $OUTPUT_DIR "chunks"
-$TRANSLATED_DIR = Join-Path $OUTPUT_DIR "translated"
+DATA_DIR="$PROJECT_DIR/data"
+INPUT_DIR="$DATA_DIR/input"
+OUTPUT_DIR="$DATA_DIR/output"
+CHUNKS_DIR="$OUTPUT_DIR/chunks"
+TRANSLATED_DIR="$OUTPUT_DIR/translated"
 
-New-Item -ItemType Directory -Force -Path $INPUT_DIR, $CHUNKS_DIR, $TRANSLATED_DIR | Out-Null
+mkdir -p "$INPUT_DIR" "$CHUNKS_DIR" "$TRANSLATED_DIR"
 
 # Confirmar setup
-Write-Host "Setup completo! Estrutura do projeto configurada:"
-Write-Host "- Input: $INPUT_DIR"
-Write-Host "- Output Chunks: $CHUNKS_DIR"
-Write-Host "- Output Translated: $TRANSLATED_DIR"
+echo "Setup completo! Estrutura do projeto configurada em:"
+echo "- Input: $INPUT_DIR"
+echo "- Output Chunks: $CHUNKS_DIR"
+echo "- Output Translated: $TRANSLATED_DIR"

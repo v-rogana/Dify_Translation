@@ -73,14 +73,15 @@ def process_files_in_folder(folder_path, output_folder):
                 if result:  # Apenas salva se houver output
                     save_to_markdown(result, file, output_folder)
             print("Aguardando 2 minutos para processar o próximo arquivo...")
-            time.sleep(2 * 60)  # Espera 2 minutos entre os arquivos
+            time.sleep(1 * 60)  # Espera 2 minutos entre os arquivos
     except Exception as e:
         print(f"Erro ao processar os arquivos: {e}")
 
 # Configuração dos caminhos de entrada e saída com base na nova estrutura
 if __name__ == "__main__":
-    input_folder = os.path.join(os.path.dirname(__file__), "..", "data", "input")
-    output_folder = os.path.join(os.path.dirname(__file__), "..", "data", "output")
+    # Corrigindo para ler de 'chunks' e salvar em 'translated'
+    input_folder = os.path.join(os.path.dirname(__file__), "..", "data", "output", "chunks")
+    output_folder = os.path.join(os.path.dirname(__file__), "..", "data", "output", "translated")
 
     # Executa o processamento
     process_files_in_folder(input_folder, output_folder)
