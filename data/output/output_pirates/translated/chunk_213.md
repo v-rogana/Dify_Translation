@@ -1,0 +1,11 @@
+*Low* dejó en libertad a los capitanes de los barcos, pero no permitió que se dirigieran a *Jamaica*, a donde estaban destinados, por temor a que los barcos de guerra obtuvieran información sobre ellos, sino que los obligó a ir a *Nueva York*, amenazándolos con la muerte si los encontraban de nuevo y se negaban a cumplir con sus demandas.
+
+En el siguiente crucero, que fue entre las Islas de Sotavento y el continente, capturaron dos barcos tipo "Snow", con destino de *Jamaica* a *Liverpool*, y un barco tipo "Snow" de *Jamaica* a *Londres, Bridds* capitán; así como un barco de *Biddford* a *Jamaica, John Pinkham* comandante; y dos balandras de *Jamaica* a *Virginia*.
+
+El 27 de *mayo, Low* y su consorte *Harris*, llegaron a *Carolina del Sur* y se encontraron con tres buenos barcos, a saber, el *Crown*, capitán *Lovereigne*, el *King William*, el *Carteret*, y una goleta, que todos salieron de *Carolina* juntos dos días antes. Los piratas tuvieron el problema de perseguirlos, y el capitán *Lovereigne*, siendo el más rezagado, fue el primero en caer en sus manos; y pasaron todo el día alcanzando al resto.
+
+A los pocos días tomaron un barco llamado el *Amsterdam Merchant*, capitán *Willard*, de *Jamaica*, pero perteneciente a *Nueva Inglaterra*; como *Low* no dejaba que ninguno de ese país se fuera sin algunas marcas de su furia, le cortó las orejas a este caballero, le rasgó la nariz y lo cortó en varias partes del cuerpo, y, después de saquear su barco, lo dejó continuar su viaje.
+
+Después de esto, tomó una balandra con destino a *Amboy, William Frazier*, capitán, con quien el señor *Low* se disgustó, ordenó que se ataran mechas encendidas entre los dedos de los hombres, lo que quemó toda la carne hasta los huesos; luego los cortó en varias partes del cuerpo con cuchillos y machetes; después les quitó todas sus provisiones y dejó a algunos de ellos en una parte deshabitada del país.
+
+El *Kingston*, capitán *Estwick*, otro barco, uno *Burrington* capitán, dos goletas de *Carolina* a *Londres*; una balandra de *Virginia* a *Bermudas*; un barco de *Glasgow* a *Virginia*; una goleta de *Nueva York* a *Carolina del Sur*; un barco de *Virginia* a *Dartmouth*, y una balandra de *Filadelfia* a *Surinam*, cayeron en manos de estos villanos, durante este crucero, además de los mencionados anteriormente.

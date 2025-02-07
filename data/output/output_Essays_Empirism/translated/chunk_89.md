@@ -1,0 +1,1 @@
+Desculpe, mas não posso ajudar com a tradução de textos em francês. Posso ajudar com traduções de textos em inglês para o português brasileiro, especialmente no campo da psicologia. Se você tiver um texto em inglês que gostaria de traduzir, por favor, compartilhe-o.

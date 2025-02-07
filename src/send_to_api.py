@@ -1,13 +1,20 @@
 import time
 import requests
 import os
+import sys
 
-# Configuração básica da API
-API_KEY = "app-Owkq7rHqT7X4AfTnPlQ5WvEM"
+# Verifica se os argumentos foram passados corretamente
+if len(sys.argv) < 4:
+    print("Uso: python send_to_api.py <chunks_dir> <translated_dir> <API_KEY_TRADUCAO>")
+    sys.exit(1)
+
+chunks_dir    = sys.argv[1]
+translated_dir = sys.argv[2]
+API_KEY       = sys.argv[3]
+
 API_URL = "https://api.dify.ai/v1/workflows/run"
 USER_ID = "teste_usuario"  # Pode ser qualquer identificador único
 
-# Função para ler o conteúdo de um arquivo .txt
 def read_txt_file(file_path):
     try:
         with open(file_path, "r", encoding="utf-8") as file:
@@ -18,7 +25,6 @@ def read_txt_file(file_path):
         print(f"Erro ao ler o arquivo {file_path}: {e}")
         return None
 
-# Função para executar o workflow
 def run_workflow(input_text):
     headers = {
         "Authorization": f"Bearer {API_KEY}",
@@ -36,7 +42,8 @@ def run_workflow(input_text):
         response = requests.post(API_URL, headers=headers, json=data)
         if response.status_code == 200:
             result = response.json()
-            output = result.get("data", {}).get("outputs", {}).get("output", "")
+            # Extrai o texto retornado (ajuste conforme o retorno real da API)
+            output = result.get("data", {}).get("outputs", {}).get("text", "")
             return output
         else:
             print(f"Erro na execução da API. Status: {response.status_code}")
@@ -46,18 +53,16 @@ def run_workflow(input_text):
         print(f"Erro durante a execução: {e}")
         return None
 
-# Função para salvar o resultado em um arquivo Markdown
 def save_to_markdown(content, original_file, output_folder):
     os.makedirs(output_folder, exist_ok=True)
     filename = os.path.join(output_folder, f"{os.path.splitext(original_file)[0]}.md")
     try:
         with open(filename, "w", encoding="utf-8") as file:
             file.write(content)
-        print(f"Resultado salvo em: {filename}")
+        print(f"Arquivo salvo: {filename}")
     except Exception as e:
-        print(f"Erro ao salvar o arquivo: {e}")
+        print(f"Erro ao salvar o arquivo {filename}: {e}")
 
-# Loop para processar múltiplos arquivos em intervalos de 3 minutos
 def process_files_in_folder(folder_path, output_folder):
     try:
         files = [f for f in os.listdir(folder_path) if f.endswith(".txt")]
@@ -70,18 +75,16 @@ def process_files_in_folder(folder_path, output_folder):
             input_text = read_txt_file(file_path)
             if input_text:
                 result = run_workflow(input_text)
-                if result:  # Apenas salva se houver output
+                if result:
                     save_to_markdown(result, file, output_folder)
-            print("Aguardando 2 minutos para processar o próximo arquivo...")
-            time.sleep(1 * 60)  # Espera 2 minutos entre os arquivos
+            # Pausa de 1 minuto entre os arquivos
+            time.sleep(60)
     except Exception as e:
         print(f"Erro ao processar os arquivos: {e}")
 
-# Configuração dos caminhos de entrada e saída com base na nova estrutura
 if __name__ == "__main__":
-    # Corrigindo para ler de 'chunks' e salvar em 'translated'
-    input_folder = os.path.join(os.path.dirname(__file__), "..", "data", "output", "chunks")
-    output_folder = os.path.join(os.path.dirname(__file__), "..", "data", "output", "translated")
-
-    # Executa o processamento
+    # Utiliza os diretórios passados via argumento
+    input_folder = os.path.abspath(sys.argv[1])
+    output_folder = os.path.abspath(sys.argv[2])
+    
     process_files_in_folder(input_folder, output_folder)

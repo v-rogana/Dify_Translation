@@ -1,0 +1,17 @@
+El mastelero de mesana del pirata cayó, y parte de su aparejo fue desgarrado, sin embargo, aún superaba en velocidad al barco de guerra, y se deslizaba medio tiro de cañón de ellos, mientras continuaban disparando sin interrupción, y el otro devolvía los disparos que podían hacerse, hasta que, por favor de los vientos, se acercaron mucho de nuevo; y después de intercambiar algunos disparos más, alrededor de la una y media, su palo mayor cayó, habiendo recibido un disparo un poco por debajo del parrel.
+
+A las dos, arrió sus colores y pidió cuartel, resultando ser un barco, anteriormente llamado el _Onslow_, pero por ellos, el _Royal Fortune_; y los prisioneros de ella, les aseguraron que el barco más pequeño de los dos, que aún quedaba en el camino, les pertenecía, con el nombre de _Little Ranger_, que habían abandonado en esta ocasión.
+
+_Isaac Sun_, _Ralph Baldrick_, _Daniel Maclaughlin_.
+
+A los prisioneros se les preguntó por el tribunal, con el mismo propósito que a los otros por la mañana; qué objeciones tenían que hacer contra lo que se había jurado. ¿Y qué tenían que decir en su defensa? Y su respuesta fue muy similar a la de los otros prisioneros; que eran hombres forzados, que no habían disparado un cañón en esta resistencia contra el _Swallow_, y que la poca ayuda que dieron en esta ocasión, fue a las velas y aparejos, para cumplir con las órdenes arbitrarias de _Roberts_, quien había amenazado, y estaban persuadidos de que lo haría, con dispararles si se negaban.
+
+El tribunal, para dispensar justicia equitativa, misericordiosamente resolvió para estos, como lo habían hecho para la otra tripulación pirata; que se escucharan más pruebas contra cada hombre individualmente, sobre los dos puntos, de ser voluntario al principio, y sobre sus actos particulares de piratería y robo desde entonces: para que los hombres que habían sido recibidos recientemente entre ellos, y que aún no habían estado en la toma o saqueo de ningún barco, pudieran tener la oportunidad y el beneficio de demostrar su inocencia, y no caer promiscuamente con los culpables.
+
+_Por orden del tribunal_, John Atkins, _registrador_.
+
+_Wm. Magnes, Tho. Oughterlauney, Wm. Main, Wm. Mackintosh, Val. Ashplant, John Walden, Israel Hind, Marcus Johnson, Wm. Petty, Wm. Fernon, Abraham Harper, Wm. Wood, Tho. How, John Stephenson, Ch. Bunce_, y _John Griffin_
+
+Contra estos, fue declarado por el capitán _Joseph Trahern_, y _George Fenn_, su compañero, que todos ellos, o bien en el ataque y toma del barco King _Solomon_, o después en el robo y saqueo de ella, y de esta manera; que el 6 de _enero_ pasado, su barco anclado cerca del cabo _Appollonia_ en _África_, descubrió un bote remando hacia ellos, contra viento y corriente, desde un barco que estaba a unas tres millas a sotavento. Juzgaron por el número de hombres en ella, a medida que se acercaba, que era un pirata, e hicieron algunas preparaciones para recibirlo, creyendo, en una vista más cercana, que considerarían oportuno retirarse de un ataque que debía ser de su lado con gran desventaja en un bote abierto, y contra el doble del número de hombres; sin embargo, por la imprudencia y la pusilanimidad de su propia gente (que dejó caer sus armas, e inmediatamente pidió cuartel) el barco fue tomado, y luego robado por ellos.
+
+_Presidente._ ¿Puede recordar algún detalle en la captura y robo?

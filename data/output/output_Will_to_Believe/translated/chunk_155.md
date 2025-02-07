@@ -1,0 +1,15 @@
+A pura verdade é que a 'filosofia' da evolução (diferenciada de nossa informação especial sobre casos particulares de mudança) é um credo metafísico, e nada mais. É um estado de contemplação, uma atitude emocional, em vez de um sistema de pensamento,—um estado que é tão antigo quanto o mundo, e que nenhuma refutação de qualquer uma de suas encarnações (como a filosofia spenceriana) irá dissipar; o estado de panteísmo fatalista, com sua intuição do Uno e Todo, que foi, é, e sempre será, e do qual cada coisa singular procede. Longe de nós falar depreciativamente aqui de um estilo tão antigo e poderoso de olhar o mundo como este. O que atualmente chamamos de descobertas científicas não tiveram nada a ver com seu nascimento, nem se pode conceber facilmente que elas algum dia lhe darão seu _quietus_, não importa quão logicamente incompatíveis com seu espírito as distinções fenomenais últimas que {254} a ciência acumula possam se revelar. Ele pode rir das distinções fenomenais nas quais a ciência se baseia, pois respira seu sopro vital de uma região que—seja acima ou abaixo—é pelo menos completamente diferente daquela na qual a ciência habita. Um crítico, no entanto, que não pode refutar a verdade do credo metafísico, pode pelo menos levantar sua voz em protesto contra seu disfarce em plumas 'científicas'. Eu acho que todos que tiveram a paciência de me seguir até aqui concordarão que a 'filosofia' spenceriana do progresso social e intelectual é um anacronismo obsoleto, revertendo a um tipo de pensamento pré-darwiniano, assim como a filosofia spenceriana da 'Força', apagando todas as distinções anteriores entre energia atual e potencial, momento, trabalho, força, massa, etc., que os físicos com tanto esforço alcançaram, nos leva de volta a uma era pré-galileana.
+
+[1] Uma palestra perante a Sociedade de História Natural de Harvard; publicada no Atlantic Monthly, outubro de 1880.
+
+[2] A teoria da pangênese de Darwin é, de fato, uma tentativa de explicar (entre outras coisas) a variação. Mas ocupa seu próprio lugar separado, e seu autor não invoca mais o ambiente quando fala das adesões de gemas do que invoca essas adesões quando fala das relações do animal inteiro com o ambiente. _Divide et impera!_
+
+[3] É verdade que também o remodela, até certo ponto, por sua influência educativa, e que isso constitui uma diferença considerável entre o caso social e o caso zoológico. Eu negligencio este aspecto da relação aqui, pois o outro é mais importante. No final do artigo, retornarei a ele incidentalmente.
+
+[4] O leitor se lembrará de quando isso foi escrito.
+
+[5] Palestras e Ensaios, i. 82.
+
+[6] O próprio Sr. Grant Allen, em um artigo do qual citarei em breve, admite que um grupo de pessoas que, se tivessem sido expostas há eras às agências geográficas de Timbuctu, teriam se desenvolvido em negros, agora, após uma exposição prolongada às condições de Hamburgo, nunca se tornariam negros se transplantados para Timbuctu.
+
+[7] Estudo da Sociologia, páginas 33-35.

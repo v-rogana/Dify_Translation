@@ -1,0 +1,13 @@
+<OBSERVAÇÕES E AJUSTES>
+1. [Melhoria] "Most men who have once convinced themselves, by what seems to them a careful examination, that any one species of the supernatural exists," foi traduzido como "A maioria dos homens que uma vez se convenceram, pelo que lhes parece um exame cuidadoso, de que qualquer espécie do sobrenatural existe,". A tradução está correta, mas poderia ser mais fluida como "A maioria dos homens que, após um exame que lhes parece cuidadoso, se convenceram de que qualquer espécie do sobrenatural existe,".
+2. [Erro] "To a mind that has thus made its _salto mortale_," foi traduzido corretamente, mas a explicação entre parênteses poderia ser mais clara: "Para uma mente que fez assim seu **salto mortale** (salto mortal, uma mudança radical de crença)" poderia ser "Para uma mente que fez assim seu **salto mortale** (salto mortal, uma mudança radical de crença)".
+3. [Melhoria] "the minute work over insignificant cases and quiddling discussion of 'evidential values,'" foi traduzido como "o trabalho minucioso sobre casos insignificantes e a discussão detalhada dos 'valores evidenciais',". A tradução está correta, mas "quiddling" poderia ser traduzido como "discussão minuciosa" para manter a nuance original.
+4. [Erro] "So science simply falls back on her general _non-possumus_;" foi traduzido corretamente, mas a explicação entre parênteses está ausente. Deveria ser "Assim, a ciência simplesmente recua em seu geral **non-possumus** (não podemos);".
+5. [Melhoria] "But the oftener one is forced to reject an alleged sort of fact by the use of this mere presumption," foi traduzido como "Mas quanto mais vezes se é forçado a rejeitar um suposto tipo de fato pelo uso desta mera presunção,". A tradução está correta, mas poderia ser mais fluida como "Mas quanto mais vezes alguém é forçado a rejeitar um suposto tipo de fato com base apenas nesta presunção,".
+
+<VERSÃO CORRIGIDA (APENAS TRECHOS RELEVANTES)>
+- Para o item 1: "A maioria dos homens que, após um exame que lhes parece cuidadoso, se convenceram de que qualquer espécie do sobrenatural existe,"
+- Para o item 2: "Para uma mente que fez assim seu **salto mortale** (salto mortal, uma mudança radical de crença),"
+- Para o item 3: "o trabalho minucioso sobre casos insignificantes e a discussão minuciosa dos 'valores evidenciais',"
+- Para o item 4: "Assim, a ciência simplesmente recua em seu geral **non-possumus** (não podemos);"
+- Para o item 5: "Mas quanto mais vezes alguém é forçado a rejeitar um suposto tipo de fato com base apenas nesta presunção,"

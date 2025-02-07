@@ -1,0 +1,17 @@
+De otros absueltos, también parecía, que al principio era un voluntario entre ellos, de una isla llamada *Dominico*, en las *Indias Occidentales*, y para recomendarse a sí mismo, les dijo que era un desertor del *Rose Man of War*, y antes de eso, había estado en el Camino Real; siempre estaba borracho, dijeron, y tan mal en el momento en que se encontraron con el *Swallow*, que no sabía nada de la acción, sino que subió fanfarroneando con su sable, después de que la *Fortuna* había arriado sus colores, para saber quién iría a bordo del premio; y pasó algún tiempo antes de que pudieran persuadirlo de la verdad de su condición.
+
+Pudo decir poco en su defensa, reconoció esta última parte de embriaguez; un vicio, dice, que tuvo demasiada participación en atraparlo en este curso de vida, y había sido un mayor motivo para él que el oro. _Culpable._
+
+_William Davis._
+
+_William Allen_ declaró, que conocía a este prisionero en *Sierraleon*, perteneciente a la galera *Ann*; que tuvo una pelea con, y golpeó al compañero de ese barco, por lo que (según dijo) al tener miedo de regresar a su deber, se asoció con las costumbres ociosas y formas de vida entre los negros, de quienes recibió una esposa, y la vendió ingrata y una noche, por algo de ponche para saciar su sed. Después de esto, habiéndose puesto bajo la protección del Sr. *Plunket*, gobernador allí para la Compañía Real *Africana*: los parientes y amigos de la mujer, acudieron a él para pedir reparación, quien inmediatamente entregó al prisionero, y les dijo que no le importaba si le cortaban la cabeza; pero los negros, juzgando sabiamente que no obtendrían un buen precio, lo vendieron a su vez nuevamente al señor *Jossee*, un negro cristiano, y nativo de ese lugar; quien esperaba y acordó dos años de servicio de él, en consideración de lo que había desembolsado, para la redención de la mujer: pero mucho antes de la expiración de este tiempo, *Roberts* llegó al río *Sierraleon*, donde el prisionero, (como el señor *Jossee* aseguró al declarante,) se unió como voluntario con ellos.
+
+El declarante corrobora aún más esta parte de la evidencia; en que él, obligado a detenerse en el cabo *Mount*, en su paso hacia aquí, se encontró allí con dos desertores del barco de *Roberts*, quienes le aseguraron lo mismo; y que los piratas planeaban despedir a *Davis* en la próxima oportunidad, como un tipo bueno para nada.
+
+De *Glasby* y *Lilburn*, era evidente, que cada pirata, mientras se quedaban en *Sierraleon*, iba a tierra a discreción. Que *Roberts* había asegurado a menudo al Sr. *Glyn* y a otros comerciantes, en ese lugar, que no forzaría a nadie; y en resumen, no había necesidad de ello; en particular, el compañero de remo del prisionero se fue, y cree, que podría haber hecho lo mismo, si hubiera querido.
+
+El prisionero alegó haber sido detenido contra su voluntad, y dice, que regresando con colmillos de elefante para *Sierraleon*, el bote del pirata lo persiguió y lo llevó a bordo, donde fue mantenido por su comprensión del pilotaje y la navegación de ese río.
+
+Era obvio para el tribunal, no solo cuán frívolas eran las excusas de coacción y fuerza entre estas personas, al comenzar como piratas, sino también era evidente para ellos, por estos dos desertores, encontrados en el cabo *Mount*, y la manera discrecional en que vivían, en *Sierraleon*; a través de cuánta poca dificultad varios de ellos lo hicieron, y otros podrían haber escapado después, si solo hubieran obtenido su propio consentimiento para ello. _Culpable._
+
+* * *

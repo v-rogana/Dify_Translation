@@ -1,0 +1,19 @@
+Ainda assim, ele nunca explica como seriam as transições intelectuais caso as tivéssemos. Ele apenas as define negativamente - elas não são espaciais, temporais, predicativas ou causais; ou qualitativas ou de outra forma seriais; ou de qualquer maneira relacionais como ingenuamente traçamos relações, pois as relações _separam_ termos, e precisam ser conectadas _ad infinitum_. A aproximação mais próxima que ele faz para descrever uma transição verdadeiramente intelectual é quando fala de _A_ e _B_ como estando 'unidos, cada um por sua própria natureza, em um todo que é a natureza de ambos igualmente.'[64] Mas isso (o que, _com licença_ do Sr. Bradley, parece exquisitamente análogo a 'tomar' uma conglomeração em um 'bloco', se não a 'submergir') não sugere nada além daquele _confluxo_ que a experiência pura oferece tão abundantemente, como quando 'espaço', 'branco' e 'doce' são confluentes em um 'pedaço de açúcar', ou sensações cinestésicas, dérmicas e ópticas confluentes em 'minha mão.'[65] Tudo o que posso verificar nas transições que o intelecto do Sr. Bradley deseja como seu _proprius motus_ é uma reminiscência dessas e de outras conjunções sensíveis (especialmente conjunções espaciais), mas uma reminiscência tão vaga que seus originais não são reconhecidos. Bradley, em suma, repete a fábula do cachorro, o osso e sua imagem na água. Com um mundo de particularidades, dado em união encantadora, em conjunção definitivamente variada e variadamente definida, o 'como' do qual você 'entende' assim que vê o fato deles,[66] pois não há 'como' exceto a constituição do fato como dado; com tudo isso dado a ele, digo, na experiência pura, ele pede por alguma união inefável no abstrato, que, se ele a obtivesse, seria apenas um duplicado do que ele já possui em sua plena posse. Certamente ele abusa do privilégio que a sociedade concede a todos nós filósofos, de sermos confusos.
+
+Escrita polêmica como esta é odiosa; mas com o absolutismo em posse em tantos setores, a omissão de defender meu empirismo radical contra seu campeão mais conhecido contaria como superficialidade ou incapacidade. Tenho que concluir que sua dialética não invalidou em nenhum grau as conjunções usuais pelas quais o mundo, como experimentado, se mantém tão variadamente unido. Em particular, ela deixa uma teoria empírica do conhecimento[67] intacta, e nos permite continuar a acreditar com o senso comum que um objeto _pode_ ser conhecido, se tivermos qualquer base para pensar que ele _é_ conhecido, por muitos conhecedores.
+
+No [próximo ensaio] retornarei a esta última suposição, que me parece oferecer outras dificuldades muito mais difíceis para uma filosofia de experiência pura lidar do que qualquer das objeções dialéticas do absolutismo.
+
+NOTAS DE RODAPÉ:
+
+[43] [Reimpresso de _The Journal of Philosophy, Psychology and Scientific Methods_, vol. II, No. 2, 19 de janeiro de 1905. Reimpresso também como Apêndice A em _A Pluralistic Universe_, pp. 347-369. As correções do autor foram adotadas no presente texto. ED.]
+
+[44] [F. H. Bradley: _Appearance and Reality_, segunda edição, pp. 152-153, 23, 118, 104, 108-109, 570.]
+
+[45] Compare a admirável _Auseinandersetzung_ do Professor MacLennan com o Sr. Bradley, em _The Journal of Philosophy, Psychology and Scientific Methods_, vol. I, [1904], pp. 403 ff., especialmente pp. 405-407.
+
+[46] [Hume: _Treatise of Human Nature_, Apêndice, edição de Selby-Bigge, p. 636.]
+
+[47] Tecnicamente, parece classificável como uma 'falácia de composição.' Uma dualidade, predicável dos dois conjuntos, _L--M_ e _M--N_, é imediatamente predicada de uma de suas partes, _M_.
+
+[48] Veja acima, pp. 42 ff.

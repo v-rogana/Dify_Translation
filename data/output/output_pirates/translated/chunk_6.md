@@ -1,0 +1,17 @@
+*El caballero que se ha tomado la molestia de hacer estas observaciones es el Sr. Atkins, un cirujano, un hombre ingenioso en su propia profesión, y uno que no está atado por consideraciones estrechas para hacer un servicio al público, y ha tenido la amabilidad de comunicarlas generosamente para el bien de otros. No dudo que sus observaciones resultarán curiosas y muy útiles para aquellos que comercian con esas partes, además de que se presenta aquí un método de comercio con los *portugueses*, que puede resultar de gran beneficio para algunos de nuestros compatriotas, si se sigue según su plan.*
+
+*Se espera que estas cosas satisfagan al público, de que el autor de las siguientes páginas no consideró nada tanto como hacer el libro útil;--aunque se le ha informado que algunos caballeros han planteado una objeción contra la veracidad de su contenido, _a saber,_ que parece calculado para entretener y divertir.--Si los hechos están relatados con algo de agrado y vida, esperamos que no se impute como una falta; pero en cuanto a su credibilidad, podemos asegurarles que los marineros, es decir, todos los que conocen la naturaleza de estas cosas, no han sido capaces de hacer la menor objeción a su credibilidad:--Y se atreverá a afirmar, que no hay un hecho o circunstancia en todo el libro, que no pueda probar con testigos creíbles.*
+
+*Ha habido otros piratas, además de aquellos cuya historia aquí se relata, tales como los que se nombran a continuación, y sus aventuras son tan extravagantes y llenas de maldad, como aquellos que son el tema de este libro.--El autor ya ha comenzado a organizarlos en método, y tan pronto como reciba algunos materiales para completarlos, (que espera recibir pronto de las *Indias Occidentales*). Si el público le da ánimo, tiene la intención de aventurarse en un segundo volumen.*
+
+LA HISTORIA DE LOS PIRATAS.
+
+INTRODUCCIÓN.
+
+Como los piratas en las *Indias Occidentales* han sido tan formidables y numerosos, que han interrumpido el comercio de *Europa* hacia esas partes; y nuestros comerciantes *ingleses*, en particular, han sufrido más por sus depredaciones, que por la fuerza unida de *Francia* y *España*, en la última guerra: No dudamos que el mundo estará curioso de conocer el origen y progreso de estos desesperados, quienes fueron el terror de la parte comerciante del mundo.
+
+Pero antes de entrar en su historia particular, no estará de más, a modo de introducción, mostrar, mediante algunos ejemplos tomados de la historia, el gran mal y peligro que amenazan a los reinos y repúblicas, por el aumento de este tipo de ladrones; cuando ya sea por los problemas de tiempos particulares, o por la negligencia de los gobiernos, no son aplastados antes de que tomen fuerza.
+
+Ha sido el caso anteriormente, que cuando se ha permitido a un solo pirata recorrer los mares, al no ser considerado digno de la atención de un gobierno, ha crecido poco a poco tan poderoso, que ha puesto al gobierno en el gasto de mucha sangre y tesoro, antes de que fuera suprimido. No examinaremos cómo ha sucedido que nuestros piratas en las *Indias Occidentales* han aumentado continuamente hasta hace poco; esta es una investigación que pertenece a la legislatura, o a los representantes del pueblo en el parlamento, y a ellos se lo dejaremos.
+
+Nuestro propósito será brevemente mostrar, qué de inicios tan insignificantes como estos, otras naciones han sufrido.

@@ -1,0 +1,1 @@
+A ideia é, portanto, quando considerada funcionalmente, um instrumento para nos permitir lidar melhor com o objeto e agir em relação a ele. Mas ela e o objeto são ambos partes do tecido geral da realidade em grande escala; e quando dizemos que a ideia nos leva em direção ao objeto, isso significa apenas

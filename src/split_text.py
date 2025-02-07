@@ -1,5 +1,6 @@
 import os
 import re
+import sys
 
 def split_text_into_chunks(txt_path, output_folder, min_words=300, max_words=600):
     # Lê o conteúdo do arquivo de texto
@@ -52,7 +53,14 @@ def split_text_into_chunks(txt_path, output_folder, min_words=300, max_words=600
     print(f"Texto dividido em {len(chunks)} chunks e salvo em {output_folder}")
 
 if __name__ == "__main__":
-    txt_path = os.path.join(os.path.dirname(__file__), "..", "data", "input", "teste.txt")
-    output_folder = os.path.join(os.path.dirname(__file__), "..", "data", "output", "chunks")
+    # Recebe os argumentos de entrada do run_translation.py
+    if len(sys.argv) != 3:
+        print("Uso: python split_text.py <arquivo_entrada> <diretorio_saida>")
+        sys.exit(1)
+
+    input_text = sys.argv[1]  # Nome do arquivo de entrada
+    output_folder = sys.argv[2]  # Diretório de saída
+
+    txt_path = os.path.join(os.path.dirname(__file__), "..", "data", "input", input_text)
 
     split_text_into_chunks(txt_path, output_folder)

@@ -1,0 +1,17 @@
+As declarações anteriores reproduzem o conteúdo essencial da palestra sobre Verdade no meu livro PRAGMATISM. A doutrina de Schiller sobre 'humanismo', os 'Estudos em teoria lógica' de Dewey e o meu próprio 'empirismo radical' envolvem todos essa noção geral de verdade como 'funcionamento', seja real ou concebível. Mas eles a envolvem como apenas um detalhe em meio a teorias muito mais amplas que visam, eventualmente, determinar a noção do que 'realidade' em geral é em sua natureza e constituição últimas.
+
+X
+
+A EXISTÊNCIA DE JÚLIO CÉSAR [Nota de rodapé: Originalmente impresso sob o título de 'Verdade versus Veracidade', no Journal of Philosophy.]
+
+Meu relato sobre a verdade é puramente lógico e se relaciona apenas à sua definição. Eu sustento que você não pode dizer o que a PALAVRA 'verdadeiro' SIGNIFICA, quando aplicada a uma afirmação, sem invocar o CONCEITO DO FUNCIONAMENTO DAS AFIRMAÇÕES.
+
+Assuma, para fixar nossas ideias, um universo composto de apenas duas coisas: o César imperial morto e transformado em argila, e eu, dizendo 'César realmente existiu.' A maioria das pessoas ingenuamente consideraria que a verdade foi proferida, e diria que, por uma espécie de **actio in distans** (ação à distância), minha afirmação tomou posse direta do outro fato.
+
+Mas minhas palavras denotaram TÃO certamente aquele César?—ou conotaram TÃO certamente seus atributos individuais? Para preencher a medida completa do que o epíteto 'verdadeiro' pode idealmente significar, meu pensamento deveria manter uma relação 'um-para-um' totalmente determinada e inequívoca com seu próprio objeto particular. No universo ultra-simples imaginado, a referência não é certificada. Se houvesse dois Césares, não saberíamos qual era o pretendido. As condições de verdade, assim, parecem incompletas neste universo de discurso, de modo que ele deve ser ampliado.
+
+Os transcendentalistas o ampliam invocando uma mente absoluta que, como possui todos os fatos, pode correlacioná-los soberanamente. Se ela pretende que minha afirmação DEVA referir-se àquele César idêntico, e que os atributos que tenho em mente DEVAM significar seus atributos, essa intenção é suficiente para tornar a afirmação verdadeira.
+
+Eu, por minha vez, amplio o universo admitindo intermediários finitos entre os dois fatos originais. César TEVE, e minha afirmação TEM, efeitos; e se esses efeitos de alguma forma se conectam, é fornecido um meio concreto e base para a relação cognitiva determinada, que, como uma pura **ACTIO IN DISTANS**, parecia flutuar de forma vaga e ininteligível.
+
+O verdadeiro César, por exemplo, escreveu um manuscrito do qual vejo uma reimpressão real, e digo 'o César que quero dizer é o autor DAQUILO.' O funcionamento do meu pensamento, assim, determina tanto seu significado denotativo quanto conotativo de forma mais completa. Agora, ele se define como nem irrelevante para o verdadeiro César, nem falso no que sugere sobre ele. A mente absoluta, vendo-me assim trabalhando em direção a César através dos intermediários cósmicos, poderia bem dizer: 'Tais funcionamentos apenas especificam em detalhe o que eu mesmo quis dizer com a afirmação sendo verdadeira. Eu decreto que a relação cognitiva entre os dois fatos originais signifique que exatamente esse tipo de cadeia concreta de intermediários existe ou pode existir.'
