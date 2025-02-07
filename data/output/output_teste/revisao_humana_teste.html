@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Revisão Final: Correção, Original e Tradução</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 20px auto;
+      background-color: #fff;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .header h1 {
+      margin: 0;
+      font-size: 28px;
+      color: #333;
+    }
+    .header p {
+      color: #666;
+      font-size: 16px;
+    }
+    .chunk-container {
+      border: 1px solid #ddd;
+      margin-bottom: 30px;
+      padding: 15px;
+      border-radius: 8px;
+      background-color: #fafafa;
+    }
+    .chunk-header {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #333;
+    }
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 10px;
+    }
+    .comparison-table th, .comparison-table td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      vertical-align: top;
+    }
+    .comparison-table th {
+      background-color: #f0f0f0;
+      font-weight: bold;
+    }
+    .correction-area {
+      background-color: #fff8e1;
+      border: 1px solid #ffeb3b;
+      border-radius: 4px;
+      padding: 10px;
+      max-height: 250px;
+      overflow-y: auto;
+      margin-bottom: 10px;
+    }
+    .correction-area ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+    .correction-area li {
+      margin-bottom: 5px;
+    }
+    .final-text {
+      margin-top: 10px;
+    }
+    .final-text textarea {
+      width: 100%;
+      min-height: 150px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+      resize: vertical;
+    }
+    .chunk-buttons {
+      margin-top: 10px;
+    }
+    .chunk-buttons button {
+      margin-right: 10px;
+      padding: 8px 12px;
+      background-color: #4285f4;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .chunk-buttons button:hover {
+      background-color: #3367d6;
+    }
+    .export-button {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      font-size: 18px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    .export-button:hover {
+      background-color: #45a049;
+    }
+  </style>
+  <script>
+    function copyTranslation(chunkId) {
+      var transCells = document.querySelectorAll("#chunk_" + chunkId + " .translation-paragraph");
+      var text = "";
+      for (var i = 0; i < transCells.length; i++) {
+        text += transCells[i].innerText.trim() + "\n\n";
+      }
+      var finalTextArea = document.getElementById("final_" + chunkId);
+      if (finalTextArea) {
+        finalTextArea.value = text.trim();
+      }
+    }
+    
+    function exportAllFinalText() {
+      var finalTextAreas = document.querySelectorAll(".final-text textarea");
+      var combinedText = "";
+      for (var i = 0; i < finalTextAreas.length; i++) {
+        var idParts = finalTextAreas[i].id.split("_");
+        var chunkNum = idParts[1];
+        combinedText += "Chunk " + chunkNum + ":\n" + finalTextAreas[i].value.trim() + "\n\n";
+      }
+      if (!combinedText) {
+        alert("Nenhum texto final foi inserido.");
+        return;
+      }
+      var blob = new Blob([combinedText], {type: "text/plain;charset=utf-8"});
+      var url = URL.createObjectURL(blob);
+      var a = document.createElement("a");
+      a.href = url;
+      a.download = "texto_final_unificado.txt";
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Revisão Final: Correção, Original e Tradução</h1>
+      <p>Revise os textos, analise as correções sugeridas e edite o texto final de cada chunk. Ao concluir, clique em "Exportar Texto Final Unificado" para baixar o documento completo.</p>
+    </div>
+
+    <div class="chunk-container" id="chunk_1">
+      <div class="chunk-header">Chunk 1</div>
+      <table class="comparison-table">
+        <tr>
+          <th>Original</th>
+          <th>Tradução</th>
+        </tr>
+        <tr><td>EDITOR'S PREFACE</td><td class='translation-paragraph'>PREFÁCIO DO EDITOR</td></tr><tr><td>The present volume is an attempt to carry out a plan which William James is known to have formed several years before his death. In 1907 he collected reprints in an envelope which he inscribed with the title 'Essays in Radical Empiricism'; and he also had duplicate sets of these reprints bound, under the same title, and deposited for the use of students in the general Harvard Library, and in the Philosophical Library in Emerson Hall.</td><td class='translation-paragraph'>O presente volume é uma tentativa de realizar um plano que William James é conhecido por ter formulado vários anos antes de sua morte. Em 1907, ele reuniu reimpressões em um envelope que ele inscreveu com o título 'Essays in Radical Empiricism'; e ele também tinha conjuntos duplicados dessas reimpressões encadernados, sob o mesmo título, e depositados para uso dos estudantes na Biblioteca Geral de Harvard e na Biblioteca Filosófica no Emerson Hall.</td></tr><tr><td>Two years later Professor James published _The Meaning of Truth_ and _A Pluralistic Universe_, and inserted in these volumes several of the articles which he had intended to use in the 'Essays in Radical Empiricism.' Whether he would nevertheless have carried out his original plan, had he lived, cannot be certainly known. Several facts, however, stand out very clearly. In the first place, the articles included in the original plan but omitted from his later volumes are indispensable to the understanding of his other writings. To these articles he repeatedly alludes. Thus, in _The Meaning of Truth_ (p. 127), he says: "This statement is probably excessively obscure to any one who has not read my two articles 'Does Consciousness Exist?' and 'A World of Pure Experience.'" Other allusions have been indicated in the present text. In the second place, the articles originally brought together as 'Essays in Radical Empiricism' form a connected whole. Not only were most of them written consecutively within a period of two years, but they contain numerous cross-references. In the third place, Professor James regarded 'radical empiricism' as an _independent_ doctrine. This he asserted expressly: "Let me say that there is no logical connexion between pragmatism, as I understand it, and a doctrine which I have recently set forth as 'radical empiricism.' The latter stands on its own feet. One may entirely reject it and still be a pragmatist." (_Pragmatism_, 1907, Preface, p. ix.) Finally, Professor James came toward the end of his life to regard 'radical empiricism' as more fundamental and more important than 'pragmatism.' In the Preface to _The Meaning of Truth_ (1909), the author gives the following explanation of his desire to continue, and if possible conclude, the controversy over pragmatism: "I am interested in another doctrine in philosophy to which I give the name of radical empiricism, and it seems to me that the establishment of the pragmatist theory of truth is a step of first-rate importance in making radical empiricism prevail" (p. xii).</td><td class='translation-paragraph'>Dois anos depois, o Professor James publicou _The Meaning of Truth_ e _A Pluralistic Universe_, e inseriu nesses volumes vários dos artigos que ele pretendia usar nos 'Essays in Radical Empiricism'. Se ele teria, no entanto, realizado seu plano original, caso tivesse vivido, não pode ser conhecido com certeza. Vários fatos, no entanto, se destacam muito claramente. Em primeiro lugar, os artigos incluídos no plano original, mas omitidos de seus volumes posteriores, são indispensáveis para a compreensão de seus outros escritos. A esses artigos ele alude repetidamente. Assim, em _The Meaning of Truth_ (p. 127), ele diz: "Esta afirmação é provavelmente excessivamente obscura para qualquer um que não tenha lido meus dois artigos 'Does Consciousness Exist?' e 'A World of Pure Experience'." Outras alusões foram indicadas no presente texto. Em segundo lugar, os artigos originalmente reunidos como 'Essays in Radical Empiricism' formam um todo conectado. Não apenas a maioria deles foi escrita consecutivamente dentro de um período de dois anos, mas eles contêm inúmeras referências cruzadas. Em terceiro lugar, o Professor James considerava o 'empirismo radical' como uma doutrina _independente_. Isso ele afirmou expressamente: "Deixe-me dizer que não há conexão lógica entre o pragmatismo, como eu o entendo, e uma doutrina que recentemente expus como 'empirismo radical'. Esta última se sustenta por si só. Pode-se rejeitá-la inteiramente e ainda ser um pragmatista." (_Pragmatism_, 1907, Prefácio, p. ix.) Finalmente, o Professor James passou a considerar, no final de sua vida, o 'empirismo radical' como mais fundamental e mais importante do que o 'pragmatismo'. No Prefácio de _The Meaning of Truth_ (1909), o autor dá a seguinte explicação de seu desejo de continuar, e se possível concluir, a controvérsia sobre o pragmatismo: "Estou interessado em outra doutrina na filosofia à qual dou o nome de empirismo radical, e parece-me que o estabelecimento da teoria pragmatista da verdade é um passo de primeira importância para fazer o empirismo radical prevalecer" (p. xii).</td></tr>
+      </table>
+      <div class="correction-area">
+        <strong>OBSERVAÇÕES E AJUSTES</strong><ul><li>[Melhoria] A expressão "William James is known to have formed" foi traduzida como "William James é conhecido por ter formulado", que está correta, mas poderia ser mais natural como "sabe-se que William James formulou".</li><li>[Melhoria] A frase "and deposited for the use of students" foi traduzida como "e depositados para uso dos estudantes", que está correta, mas poderia ser mais clara como "e disponibilizados para uso dos estudantes".</li><li>[Melhoria] A expressão "several facts, however, stand out very clearly" foi traduzida como "vários fatos, no entanto, se destacam muito claramente", que está correta, mas poderia ser mais natural como "alguns fatos, no entanto, são bastante evidentes".</li><li>[Sugestão de Terminologia] A expressão "cross-references" foi traduzida como "referências cruzadas", que está correta, mas poderia ser mais clara como "remissões internas".</li><li>[Comentário sobre Formatação] O uso de itálico para os títulos dos livros está correto e consistente com o original.</li></ul><strong>VERSÃO CORRIGIDA (APENAS TRECHOS RELEVANTES)</strong><ul><li>Para o item 1: "sabe</li><li>se que William James formulou..."</li><li>Para o item 2: "e disponibilizados para uso dos estudantes..."</li><li>Para o item 3: "alguns fatos, no entanto, são bastante evidentes..."</li><li>Para o item 4: "...mas eles contêm inúmeras remissões internas."</li></ul>
+      </div>
+      <div class="chunk-buttons">
+        <button onclick="copyTranslation('1')">Copiar Tradução para Texto Final</button>
+      </div>
+      <div class="final-text">
+        <h3>Texto Final (Edite abaixo)</h3>
+        <textarea id="final_1" placeholder="Edite o texto final deste chunk..."></textarea>
+      </div>
+    </div>
+    
+    <button class="export-button" onclick="exportAllFinalText()">Exportar Texto Final Unificado (TXT)</button>
+  </div>
+</body>
+</html>

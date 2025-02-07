@@ -3,7 +3,7 @@ import re
 import webbrowser
 
 # --- Solicitação do caminho ---
-default_folder = r"C:\Users\victo\OneDrive\Documentos\Projetos_Allos\Dify_translation\data\output\output_Essays_Empirism"
+default_folder = r"C:\Users\victo\OneDrive\Documentos\Projetos_Allos\Dify_translation\data\output\output_teste"
 user_input = input(f"Informe o caminho da pasta de output (default: {default_folder}): ").strip()
 if not user_input:
     base_output_folder = default_folder
@@ -16,7 +16,7 @@ if not os.path.isdir(base_output_folder):
     exit(1)
 
 # --- Define os diretórios de cada etapa ---
-txt_folder = os.path.join(base_output_folder, "chunks")         # Arquivos originais (TXT)
+txt_folder = os.path.join(base_output_folder, "chunks")           # Arquivos originais (TXT)
 translated_folder = os.path.join(base_output_folder, "translated")  # Arquivos traduzidos (MD)
 corrected_folder = os.path.join(base_output_folder, "correcao")       # Arquivos de correção (MD)
 
@@ -71,17 +71,37 @@ def merge_paragraphs(text):
 
 def split_correction_items(text):
     """
-    Separa o texto de correção em itens enumerados.
-    Exemplo: "1. [Error] ... 2. [Melhoria] ..." 
-    → retorna uma lista de itens, que serão exibidos como bullet points.
+    Fallback: Separa o texto de correção em itens enumerados usando números.
+    Exemplo: "1. [Error] ..." → retorna uma lista de itens.
     """
     single_line = " ".join(text.split("\n"))
     if not single_line.strip():
         return []
-    # Divide considerando um número seguido de ponto e espaço
     items = re.split(r'(?=\d+\.\s)', single_line)
     items = [item.strip() for item in items if item.strip()]
     return items
+
+def split_correction_sections(text):
+    """
+    Procura os marcadores <OBSERVAÇÕES E AJUSTES> e 
+    <VERSÃO CORRIGIDA (APENAS TRECHOS RELEVANTES)> para separar o texto em duas seções.
+    Se encontrados, retorna um dicionário com as listas 'observacoes' e 'versao'.
+    Caso contrário, retorna tudo em 'observacoes' e 'versao' vazia.
+    """
+    pattern = r"<OBSERVAÇÕES E AJUSTES>(.*?)<VERSÃO CORRIGIDA \(APENAS TRECHOS RELEVANTES\)>(.*)"
+    m = re.search(pattern, text, re.DOTALL | re.IGNORECASE)
+    if m:
+        observacoes_raw = m.group(1).strip()
+        versao_raw = m.group(2).strip()
+        # Divide os itens de observações (supondo que comecem com número seguido de ponto)
+        observacoes_items = re.split(r"\n?\d+\.\s", observacoes_raw)
+        observacoes_items = [item.strip() for item in observacoes_items if item.strip()]
+        # Divide os itens da versão corrigida (supondo que cada item comece com "-" ou em nova linha)
+        versao_items = re.split(r"\n?-+\s*", versao_raw)
+        versao_items = [item.strip() for item in versao_items if item.strip()]
+        return {"observacoes": observacoes_items, "versao": versao_items}
+    else:
+        return {"observacoes": split_correction_items(text), "versao": []}
 
 # --- Carrega os arquivos de cada subpasta ---
 txt_files = {}
@@ -180,7 +200,7 @@ html_content = r"""<!DOCTYPE html>
       border: 1px solid #ffeb3b;
       border-radius: 4px;
       padding: 10px;
-      max-height: 150px;
+      max-height: 250px;
       overflow-y: auto;
       margin-bottom: 10px;
     }
@@ -236,7 +256,6 @@ html_content = r"""<!DOCTYPE html>
   </style>
   <script>
     function copyTranslation(chunkId) {
-      // Seleciona todos os parágrafos da coluna de tradução para o chunk
       var transCells = document.querySelectorAll("#chunk_" + chunkId + " .translation-paragraph");
       var text = "";
       for (var i = 0; i < transCells.length; i++) {
@@ -251,9 +270,8 @@ html_content = r"""<!DOCTYPE html>
     function exportAllFinalText() {
       var finalTextAreas = document.querySelectorAll(".final-text textarea");
       var combinedText = "";
-      // Itera sobre cada campo de texto final e adiciona um rótulo com o número do chunk
       for (var i = 0; i < finalTextAreas.length; i++) {
-        var idParts = finalTextAreas[i].id.split("_"); // Exemplo: "final_1"
+        var idParts = finalTextAreas[i].id.split("_");
         var chunkNum = idParts[1];
         combinedText += "Chunk " + chunkNum + ":\n" + finalTextAreas[i].value.trim() + "\n\n";
       }
@@ -296,12 +314,22 @@ for chunk in all_chunks:
     for i in range(max_rows):
         table_rows += f"<tr><td>{orig_paragraphs[i]}</td><td class='translation-paragraph'>{trans_paragraphs[i]}</td></tr>"
     
-    corrections = split_correction_items(corr_text)
-    if corrections:
-        correction_html = "<ul>"
-        for item in corrections:
-            correction_html += f"<li>{item}</li>"
-        correction_html += "</ul>"
+    # Gera a área de correção
+    if corr_text.strip():
+        sections = split_correction_sections(corr_text)
+        correction_html = ""
+        if sections["observacoes"]:
+            correction_html += "<strong>OBSERVAÇÕES E AJUSTES</strong><ul>"
+            for item in sections["observacoes"]:
+                correction_html += f"<li>{item}</li>"
+            correction_html += "</ul>"
+        if sections["versao"]:
+            correction_html += "<strong>VERSÃO CORRIGIDA (APENAS TRECHOS RELEVANTES)</strong><ul>"
+            for item in sections["versao"]:
+                correction_html += f"<li>{item}</li>"
+            correction_html += "</ul>"
+        if not correction_html:
+            correction_html = "Nenhuma correção registrada."
     else:
         correction_html = "Nenhuma correção registrada."
     
@@ -329,7 +357,7 @@ for chunk in all_chunks:
     """
     
 html_content += """
-    <button class="export-button" onclick="exportAllFinalText()">Exportar Texto Final Unificado</button>
+    <button class="export-button" onclick="exportAllFinalText()">Exportar Texto Final Unificado (TXT)</button>
   </div>
 </body>
 </html>

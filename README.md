@@ -1,99 +1,165 @@
 # Dify Translator Project
 
-Este projeto automatiza o fluxo de tradução de arquivos de texto usando a API Dify, estruturando cada etapa em scripts independentes e bem organizados. O fluxo completo é executado pelo script `run_translation.py`.
+Este projeto automatiza todo o fluxo de tradução, correção e revisão de arquivos de texto utilizando a API Dify. O sistema divide o arquivo de entrada em partes menores (chunks), envia cada parte para tradução e, em seguida, para correção. Por fim, gera uma interface HTML interativa para que o usuário revise, edite e exporte o resultado final em formatos TXT e DOCX.
+
+---
+
+## Funcionalidades
+
+- **Divisão de Texto:**  
+  O arquivo de entrada é automaticamente dividido em chunks para facilitar o processamento.
+
+- **Tradução Automatizada:**  
+  Cada chunk é enviado para a API Dify, que realiza a tradução do texto.
+
+- **Correção Automatizada:**  
+  O texto original e a tradução são combinados e enviados para correção. As correções são organizadas em duas seções:
+  - **OBSERVAÇÕES E AJUSTES:** Comentários e sugestões pontuais.
+  - **VERSÃO CORRIGIDA (APENAS TRECHOS RELEVANTES):** Trechos revisados e aprimorados.
+
+- **Interface de Revisão Interativa (HTML):**  
+  Gera um arquivo HTML que exibe lado a lado o texto original, a tradução e as correções – permitindo a edição do texto final por chunk.
+
+- **Exportação:**  
+  O usuário pode exportar o texto final unificado em formato TXT, com opção de conversão para DOCX através de um script auxiliar.
+
+---
 
 ## Estrutura do Projeto
 
 ```plaintext
 dify-translator/
 │
-├── src/
-│   ├── split_text.py          # Quebra o arquivo de entrada em chunks.
-│   ├── send_to_api.py         # Envia os chunks para tradução pela API.
-│   ├── concat_md.py           # Concatena os arquivos traduzidos em um único arquivo .md.
-│
-├── data/
-│   ├── input/                 # Pasta para os arquivos de texto a serem traduzidos.
-│   ├── output/
-│       ├── chunks/            # Chunks de texto gerados na etapa de divisão.
-│       ├── translated/        # Arquivos traduzidos e o resultado final.
-│
 ├── scripts/
 │   ├── setup_env.sh           # Script para configurar o ambiente do projeto.
 │   ├── run_translation.py     # Orquestra todo o fluxo de tradução.
+│   └── gerar_html.py          # Gera a interface HTML para revisão dos chunks.
+├── src/
+│   ├── split_text.py          # Divide o arquivo de entrada em chunks.
+│   ├── send_to_api.py         # Envia os chunks para tradução via API Dify.
+│   └──  correction.py         # Combina o original e a tradução para correção via API.
+│
+├── data/
+│   ├── input/                 # Arquivos de entrada (TXT) para tradução.
+│   └── output/                # Saída gerada automaticamente pelo orquestrador.
+│       └── output_<nome>/     # Pasta de saída com:
+│           ├── chunks/        # Chunks de texto gerados.
+│           ├── translated/    # Arquivos traduzidos (Markdown).
+│           └── correcao/      # Arquivos corrigidos (Markdown).
 │
 ├── requirements.txt           # Dependências do projeto.
-├── README.md                  # Documentação do projeto.
+└── README.md                  # Este arquivo.
 ```
 
-## Requisitos
-
-- Python 3.8+
-- Linux ou macOS
-- Ambiente configurado com as bibliotecas do `requirements.txt`
+---
 
 ## Configuração Inicial
 
-1. Clone o repositório:
+1. **Clone o Repositório:**
    ```bash
-   git clone <url-do-repositorio>
+   git clone <URL_DO_REPOSITORIO>
    cd dify-translator
    ```
 
-2. Torne o script de setup executável:
+2. **Instale as Dependências:**
    ```bash
-   chmod +x scripts/setup_env.sh
+   pip install -r requirements.txt
    ```
 
-3. Execute o script de setup:
-   ```bash
-   ./scripts/setup_env.sh
-   ```
+3. **Organize os Arquivos de Entrada:**
+   - Coloque os arquivos de texto (TXT) a serem traduzidos na pasta `data/input/`.
 
-4. Coloque o arquivo de entrada em `data/input/`.
+---
 
 ## Uso
 
-1. **Executar o fluxo completo**:
-   ```bash
-   python3 scripts/run_translation.py
-   ```
+### Execução Completa do Fluxo
 
-2. **Alterar o arquivo de entrada**:
-   - Modifique o valor da variável `input_filename` no arquivo `run_translation.py`.
-   - O nome do arquivo traduzido será baseado no nome do arquivo de entrada (ex.: `unified_<nome>.md` e `unified_<nome>.docx`).
+O fluxo completo é iniciado pelo script **orquestrador.py**. Para executá-lo, abra um terminal e utilize o comando:
+
+```bash
+python src/orquestrador.py <nome_arquivo.txt> <API_KEY_TRADUCAO> <API_KEY_CORRECAO>
+```
+
+- `<nome_arquivo.txt>`: Nome do arquivo presente em `data/input/`.
+- `<API_KEY_TRADUCAO>`: Chave da API para tradução.
+- `<API_KEY_CORRECAO>`: Chave da API para correção.
+
+**Exemplo:**
+
+```bash
+python src/orquestrador.py MeuTexto.txt minhaChaveTraducao minhaChaveCorrecao
+```
+
+> **Nota:** O orquestrador criará automaticamente uma pasta de saída em `data/output/output_<nome_arquivo>` com as subpastas `chunks`, `translated` e `correcao`.
+
+### Revisão e Exportação
+
+1. **Geração do HTML para Revisão:**
+   Após a execução do orquestrador, execute o script para gerar a interface HTML:
+   ```bash
+   python src/gerar_html.py
+   ```
+   - Ao rodar, informe o caminho da pasta de output (ou utilize o default) para que o HTML seja gerado.
+   - No HTML, cada chunk exibirá:
+     - **Original:** Texto original.
+     - **Tradução:** Texto traduzido.
+     - **Correções:** Separadas em “OBSERVAÇÕES E AJUSTES” e “VERSÃO CORRIGIDA (APENAS TRECHOS RELEVANTES)” (se os marcadores estiverem presentes no conteúdo de correção).
+     - **Área para Edição:** Onde você pode editar o texto final.
+
+2. **Exportação do Texto Final:**
+   - No HTML, utilize o botão “Exportar Texto Final Unificado (TXT)” para baixar um arquivo TXT com o texto final de todos os chunks.
+
+---
 
 ## Fluxo de Trabalho
 
-1. **Divisão do Texto** (`split_text.py`):
-   - Quebra o texto em chunks menores para facilitar a tradução.
+1. **Divisão do Texto (`split_text.py`):**  
+   Divide o arquivo de entrada em chunks menores.
 
-2. **Envio para a API** (`send_to_api.py`):
-   - Processa os chunks e obtém a tradução de cada parte.
+2. **Tradução (`send_to_api.py`):**  
+   Cada chunk é enviado para a API Dify e o resultado é salvo em Markdown na pasta `translated`.
 
-3. **Concatenação** (`concat_md.py`):
-   - Junta todos os arquivos traduzidos em um único `.md`.
+3. **Correção (`correction.py`):**  
+   Combina o texto original e a tradução, enviando para correção via API, e salva os resultados na pasta `correcao`.
 
-4. **Conversão para DOCX** (`md_to_docx.py`):
-   - Converte o arquivo Markdown final para um documento Word.
+4. **Revisão Interativa (`gerar_html.py`):**  
+   Gera um HTML que permite a visualização e edição interativa dos textos (original, tradução e correção).
+
+5. **Exportação:**  
+   - **TXT:** Gerado diretamente via interface HTML.
+
+---
 
 ## Contribuições
 
-1. Abra um fork do repositório.
-2. Crie uma branch para suas alterações:
+Contribuições são sempre bem-vindas! Para contribuir:
+
+1. **Fork o repositório.**
+2. **Crie uma branch para suas alterações:**
    ```bash
    git checkout -b minha-feature
    ```
-3. Faça o commit de suas mudanças:
+3. **Realize os commits com suas mudanças:**
    ```bash
-   git commit -m "Descrição das mudanças"
+   git commit -m "Descrição das alterações"
    ```
-4. Envie suas alterações:
+4. **Envie sua branch para o seu fork:**
    ```bash
    git push origin minha-feature
    ```
-5. Abra um Pull Request.
+5. **Abra um Pull Request** no repositório original descrevendo suas alterações.
+
+---
 
 ## Licença
 
 Este projeto é licenciado sob a [MIT License](LICENSE).
+
+---
+
+## Contato
+
+Para dúvidas, sugestões ou problemas, entre em contato através de [victor.abdallah@allos.org.br] ou acesse o [perfil do GitHub](https://github.com/v-rogana).
+
+
