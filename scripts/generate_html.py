@@ -93,10 +93,8 @@ def split_correction_sections(text):
     if m:
         observacoes_raw = m.group(1).strip()
         versao_raw = m.group(2).strip()
-        # Divide os itens de observações (supondo que comecem com número seguido de ponto)
         observacoes_items = re.split(r"\n?\d+\.\s", observacoes_raw)
         observacoes_items = [item.strip() for item in observacoes_items if item.strip()]
-        # Divide os itens da versão corrigida (supondo que cada item comece com "-" ou em nova linha)
         versao_items = re.split(r"\n?-+\s*", versao_raw)
         versao_items = [item.strip() for item in versao_items if item.strip()]
         return {"observacoes": observacoes_items, "versao": versao_items}
@@ -167,6 +165,20 @@ html_content = r"""<!DOCTYPE html>
     .header p {
       color: #666;
       font-size: 16px;
+    }
+    .instructions {
+      border: 1px solid #ccc;
+      padding: 15px;
+      background-color: #e7f3fe;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+    .instructions h2 {
+      margin-top: 0;
+      color: #333;
+    }
+    .instructions ul {
+      margin-left: 20px;
     }
     .chunk-container {
       border: 1px solid #ddd;
@@ -296,6 +308,17 @@ html_content = r"""<!DOCTYPE html>
     <div class="header">
       <h1>Revisão Final: Correção, Original e Tradução</h1>
       <p>Revise os textos, analise as correções sugeridas e edite o texto final de cada chunk. Ao concluir, clique em "Exportar Texto Final Unificado" para baixar o documento completo.</p>
+    </div>
+    <div class="instructions">
+      <h2>Instruções para Revisão</h2>
+      <p>Bem-vindo à ferramenta de revisão do Dify Translator. Aqui você deve:</p>
+      <ul>
+        <li>Analisar o trecho traduzido comparado ao original.</li>
+        <li>Utilizar as correções sugeridas como guia, mas lembre-se: <strong>não leve a correção tão a sério</strong> – a correção humana e o seu julgamento prevalecem.</li>
+        <li>Clicar no botão "Copiar Tradução para Texto Final" para copiar a tradução completa para o campo de edição abaixo.</li>
+        <li>Editar o texto final conforme o seu critério, adaptando as sugestões quando necessário.</li>
+      </ul>
+      <p>Após revisar cada chunk, edite o texto final no campo indicado e, quando terminar, utilize o botão de exportação para baixar o texto unificado.</p>
     </div>
 """
 
