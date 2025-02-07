@@ -1,1 +1,0 @@
-Suponha que eu diga que a moderação singular que agora distingue a discussão social, política e religiosa na Inglaterra, e contrasta tão fortemente com o fanatismo e dogmatismo de sessenta anos

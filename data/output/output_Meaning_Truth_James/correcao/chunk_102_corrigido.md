@@ -1,6 +1,0 @@
-<OBSERVAÇÕES E AJUSTES>
-1. [Melhoria] "is entirely in the air" foi traduzido como "está totalmente no ar", que é uma tradução literal. Sugiro "não tem fundamento" para maior clareza.
-2. [Erro] "truth impersonal and absolute" foi traduzido como "a verdade impessoal e absoluta", mas a explicação entre parênteses não foi incluída. Sugiro adicionar "(verdade que não depende de perspectivas individuais)".
-3. [Melhoria] "the glory of being truth final and absolute" foi traduzido como "a glória de ser a verdade final e absoluta", mas poderia ser mais natural como "a glória de ser a verdade definitiva e absoluta".
-4. [Erro] "the mere NOTION of an absolute standard" foi traduzido como "a mera NOÇÃO de um padrão absoluto", mas a explicação entre parênteses não foi incluída. Sugiro adicionar "(conceito de um critério inquestionável)".
-5. [Erro] "Pragmatically, then, this part of the dispute is idle" foi traduzido como "Pragmaticamente, então, esta parte da disputa é ociosa", mas poderia ser mais claro

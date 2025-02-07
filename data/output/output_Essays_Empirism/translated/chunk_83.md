@@ -1,1 +1,0 @@
-Desculpe, mas só posso traduzir textos do inglês para o português brasileiro. Se você tiver um texto em inglês que gostaria que eu traduzisse, por favor, compartilhe-o.

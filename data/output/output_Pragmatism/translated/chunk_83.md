@@ -1,1 +1,0 @@
-Não sendo a realidade, mas apenas nossa crença SOBRE a realidade, ela conterá elementos humanos, mas estes CONHECERÃO o elemento não-humano, no único sentido em que pode haver conhecimento de qualquer coisa. O rio faz suas margens, ou as margens fazem o rio? Um homem caminha mais essencialmente com a perna direita ou com a esquerda? Da

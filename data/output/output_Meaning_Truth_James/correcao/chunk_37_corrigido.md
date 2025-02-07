@@ -1,9 +1,0 @@
-<OBSERVAÇÕES E AJUSTES>
-1. [Melhoria] "Let me turn next to what his opponents mean when they say that to be true, our thoughts must 'correspond.'" foi traduzido como "Deixe-me passar agora para o que seus oponentes querem dizer quando afirmam que, para serem verdadeiros, nossos pensamentos devem 'corresponder'." A tradução está correta, mas poderia ser mais natural: "Vamos agora ao que seus oponentes querem dizer quando afirmam que, para serem verdadeiros, nossos pensamentos devem 'corresponder'."
-2. [Erro] "Die erhohung des vorgefundenen daseins" está em alemão e não foi traduzido ou explicado. Sugiro adicionar uma tradução ou explicação.
-3. [Melhoria] "Knowing," in short, may, for aught we can see beforehand to the contrary, be ONLY ONE WAY OF GETTING INTO FRUITFUL RELATIONS WITH REALITY" foi traduzido como "'Saber', em suma, pode, pelo que podemos ver antecipadamente em contrário, ser APENAS UMA MANEIRA DE ESTABELECER RELAÇÕES FRUTÍFERAS COM A REALIDADE". A tradução está correta, mas a expressão "pelo que podemos ver antecipadamente em contrário" poderia ser simplificada para "pelo que podemos prever".
-
-<VERSÃO CORRIGIDA (APENAS TRECHOS RELEVANTES)>
-- Para o item 1: "Vamos agora ao que seus oponentes querem dizer quando afirmam que, para serem verdadeiros, nossos pensamentos devem 'corresponder'."
-- Para o item 2: "Li outro dia, em um livro do Professor Eucken, uma frase, 'Die erhohung des vorgefundenen daseins' (a elevação da existência encontrada), que parece pertinente aqui."
-- Para o item 3: "'Saber', em suma, pode, pelo que podemos prever, ser APENAS UMA MANEIRA DE ESTABELECER RELAÇÕES FRUTÍFERAS COM A REALIDADE, seja a cópia uma das relações ou não."
