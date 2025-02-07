@@ -31,6 +31,20 @@
       color: #666;
       font-size: 16px;
     }
+    .instructions {
+      border: 1px solid #ccc;
+      padding: 15px;
+      background-color: #e7f3fe;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+    .instructions h2 {
+      margin-top: 0;
+      color: #333;
+    }
+    .instructions ul {
+      margin-left: 20px;
+    }
     .chunk-container {
       border: 1px solid #ddd;
       margin-bottom: 30px;
@@ -159,6 +173,17 @@
     <div class="header">
       <h1>Revisão Final: Correção, Original e Tradução</h1>
       <p>Revise os textos, analise as correções sugeridas e edite o texto final de cada chunk. Ao concluir, clique em "Exportar Texto Final Unificado" para baixar o documento completo.</p>
+    </div>
+    <div class="instructions">
+      <h2>Instruções para Revisão</h2>
+      <p>Bem-vindo à ferramenta de revisão do Dify Translator. Aqui você deve:</p>
+      <ul>
+        <li>Analisar o trecho traduzido comparado ao original.</li>
+        <li>Utilizar as correções sugeridas como guia, mas lembre-se: <strong>não leve a correção tão a sério</strong> – a correção humana e o seu julgamento prevalecem.</li>
+        <li>Clicar no botão "Copiar Tradução para Texto Final" para copiar a tradução completa para o campo de edição abaixo.</li>
+        <li>Editar o texto final conforme o seu critério, adaptando as sugestões quando necessário.</li>
+      </ul>
+      <p>Após revisar cada chunk, edite o texto final no campo indicado e, quando terminar, utilize o botão de exportação para baixar o texto unificado.</p>
     </div>
 
     <div class="chunk-container" id="chunk_1">
