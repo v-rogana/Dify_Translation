@@ -2,6 +2,7 @@
 data/input/
 # Exceto Pragmatism.txt
 !data/input/Pragmatism.txt
+!data/input/pdf
 
 # Ignora tudo dentro de data/output
 data/output/

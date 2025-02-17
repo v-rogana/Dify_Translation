@@ -14,6 +14,7 @@ Este projeto automatiza todo o fluxo de tradução, correção e revisão de arq
 
 - **Correção Automatizada:**  
   O texto original e a tradução são combinados e enviados para correção. As correções são organizadas em duas seções:
+
   - **OBSERVAÇÕES E AJUSTES:** Comentários e sugestões pontuais.
   - **VERSÃO CORRIGIDA (APENAS TRECHOS RELEVANTES):** Trechos revisados e aprimorados.
 
@@ -56,12 +57,14 @@ dify-translator/
 ## Configuração Inicial
 
 1. **Clone o Repositório:**
+
    ```bash
    git clone <URL_DO_REPOSITORIO>
    cd dify-translator
    ```
 
 2. **Instale as Dependências:**
+
    ```bash
    pip install -r requirements.txt
    ```
@@ -93,13 +96,27 @@ python src/orquestrador.py MeuTexto.txt minhaChaveTraducao minhaChaveCorrecao
 
 > **Nota:** O orquestrador criará automaticamente uma pasta de saída em `data/output/output_<nome_arquivo>` com as subpastas `chunks`, `translated` e `correcao`.
 
+O fluxo para usar o **extract_py** eh colocar o pdf original na pasta `data/input/pdf/original` onde sua verção txt sera armazenada automaticamente em `data/input/pdf/converted`, para utilizar a função deve executar o seguinte comando
+
+```bash
+python src/extract_pdf.py <entrada.pdf>
+```
+
+sendo que o arquivo de entrada deve ser digitado entre aspas, seguindo o exemplo, sendo que não eh necessario colocar a pasta do arquivo de entrada, porem ele deve estar em `data/input/pdf/original`
+
+```bash
+python src/extract_pdf.py "La Peculiaridad de lo Estetico Vol. 1.pdf"
+```
+
 ### Revisão e Exportação
 
 1. **Geração do HTML para Revisão:**
    Após a execução do orquestrador, execute o script para gerar a interface HTML:
+
    ```bash
    python src/gerar_html.py
    ```
+
    - Ao rodar, informe o caminho da pasta de output (ou utilize o default) para que o HTML seja gerado.
    - No HTML, cada chunk exibirá:
      - **Original:** Texto original.
@@ -126,7 +143,7 @@ python src/orquestrador.py MeuTexto.txt minhaChaveTraducao minhaChaveCorrecao
 4. **Revisão Interativa (`gerar_html.py`):**  
    Gera um HTML que permite a visualização e edição interativa dos textos (original, tradução e correção).
 
-5. **Exportação:**  
+5. **Exportação:**
    - **TXT:** Gerado diretamente via interface HTML.
 
 ---
@@ -161,5 +178,3 @@ Este projeto é licenciado sob a [MIT License](LICENSE).
 ## Contato
 
 Para dúvidas, sugestões ou problemas, entre em contato através de [victor.abdallah@allos.org.br] ou acesse o [perfil do GitHub](https://github.com/v-rogana).
-
-
