@@ -2,3 +2,6 @@ markdown
 beautifulsoup4
 docx
 requests
+PyPDF2
+pytesseract
+pdf2image

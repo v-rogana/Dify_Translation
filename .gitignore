@@ -1,8 +1,3 @@
-# Ignora tudo dentro de data/input
-data/input/
-# Exceto Pragmatism.txt
-!data/input/Pragmatism.txt
-
 # Ignora tudo dentro de data/output
 data/output/
 # Exceto a pasta output_Pragmatism e seu conteúdo
