@@ -3,7 +3,7 @@ import re
 import webbrowser
 
 # --- Solicitação do caminho ---
-default_folder = r"C:\Users\victo\OneDrive\Documentos\Projetos_Allos\Dify_translation\data\output\output_teste"
+default_folder = r"C:\Users\victo\OneDrive\Documentos\Projetos_Allos\Dify_translation\data\output\output_animal_inteligence"
 user_input = input(f"Informe o caminho da pasta de output (default: {default_folder}): ").strip()
 if not user_input:
     base_output_folder = default_folder

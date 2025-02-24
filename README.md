@@ -175,6 +175,7 @@ Este projeto é licenciado sob a [MIT License](LICENSE).
 
 ---
 
-## Contato
+## Contribuidores
 
-Para dúvidas, sugestões ou problemas, entre em contato através de [victor.abdallah@allos.org.br] ou acesse o [perfil do GitHub](https://github.com/v-rogana).
+- [@v-rogana](https://github.com/v-rogana) - Criador e mantenedor principal  
+- [@pdMiranda](https://github.com/pdMiranda) - Melhorias na API de tradução  
