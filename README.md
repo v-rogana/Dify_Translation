@@ -96,7 +96,7 @@ python src/orquestrador.py MeuTexto.txt minhaChaveTraducao minhaChaveCorrecao
 
 > **Nota:** O orquestrador criará automaticamente uma pasta de saída em `data/output/output_<nome_arquivo>` com as subpastas `chunks`, `translated` e `correcao`.
 
-O fluxo para usar o **extract_py** eh colocar o pdf original na pasta `data/input/pdf/original` onde sua verção txt sera armazenada automaticamente em `data/input/pdf/converted`, para utilizar a função deve executar o seguinte comando
+O fluxo para usar o **extract_pdf.py** eh colocar o pdf original na pasta `data/input/pdf/original` onde sua verção txt sera armazenada automaticamente em `data/input/pdf/converted`, para utilizar a função deve executar o seguinte comando
 
 ```bash
 python src/extract_pdf.py <entrada.pdf>
@@ -106,6 +106,12 @@ sendo que o arquivo de entrada deve ser digitado entre aspas, seguindo o exemplo
 
 ```bash
 python src/extract_pdf.py "La Peculiaridad de lo Estetico Vol. 1.pdf"
+```
+
+O fluxo para usar o **split_text.py** eh utilizar o comando abaixo com o caminho do txt a ser divido, como por exemplo `data/input/txt_original/{nome_do_txt}`, os arquivos de chunk serão armazenadas em `data/output/output_{nome_do_txt}/chunks`
+
+```bash
+python src/split_text.py <caminho_para_entrada.txt>"
 ```
 
 ### Revisão e Exportação
@@ -177,5 +183,5 @@ Este projeto é licenciado sob a [MIT License](LICENSE).
 
 ## Contribuidores
 
-- [@v-rogana](https://github.com/v-rogana) - Criador e mantenedor principal  
-- [@pdMiranda](https://github.com/pdMiranda) - Melhorias na API de tradução  
+- [@v-rogana](https://github.com/v-rogana) - Criador e mantenedor principal
+- [@pdMiranda](https://github.com/pdMiranda) - Melhorias na API de tradução
