@@ -5,13 +5,14 @@ import sys
 
 # Verifica se os argumentos foram passados corretamente
 if len(sys.argv) < 5:
-    print("Uso: python correction.py <chunks_dir> <translated_dir> <corrected_dir> <API_KEY_CORRECAO>")
+    print("Uso: python correction.py <output_dir> <API_KEY_CORRECAO>")
     sys.exit(1)
 
-chunks_dir     = sys.argv[1]
-translated_dir = sys.argv[2]
-corrected_dir  = sys.argv[3]
-API_KEY        = sys.argv[4]
+output_dir     = sys.argv[1]
+chunks_dir     = os.path.join(output_dir, "chunks")
+translated_dir = os.path.join(output_dir, "translated")
+corrected_dir  = os.path.join(output_dir, "correcao")
+API_KEY        = sys.argv[2]
 
 API_URL = "https://api.dify.ai/v1/workflows/run"
 USER_ID = "usuario_qualquer"  # Pode ser qualquer identificador único

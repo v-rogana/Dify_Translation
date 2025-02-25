@@ -119,6 +119,12 @@ O fluxo para usar o **split_text.py** eh utilizar o comando abaixo com o caminho
 python src/split_text.py <caminho_para_entrada.txt>
 ```
 
+O fluxo para usar o **correction.py** eh colocar o mesmo do **generate_html.py**, porem com a alteração do arquivo a ser executado
+
+```bash
+python src/correction.py <caminho_para_a_pasta_output>
+```
+
 ### Revisão e Exportação
 
 1. **Geração do HTML para Revisão:**
