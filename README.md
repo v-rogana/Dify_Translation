@@ -31,16 +31,6 @@ Este projeto automatiza todo o fluxo de tradução, correção e revisão de arq
 ```plaintext
 dify-translator/
 │
-├── scripts/
-│   ├── setup_env.sh           # Script para configurar o ambiente do projeto.
-│   ├── run_translation.py     # Orquestra todo o fluxo de tradução.
-│   └── gerar_html.py          # Gera a interface HTML para revisão dos chunks.
-├── src/
-│   ├── split_text.py          # Divide o arquivo de entrada em chunks.
-│   ├── send_to_api.py         # Envia os chunks para tradução via API Dify.
-│   ├── extract_pdf.py         # Extrai o texto de PDF e passa para um TXT
-│   └── correction.py          # Combina o original e a tradução para correção via API.
-│
 ├── data/
 │   └── input/                 # Arquivos de entrada para tradução.
 │     └── pdf/
@@ -52,6 +42,16 @@ dify-translator/
 │           ├── chunks/        # Chunks de texto gerados.
 │           ├── translated/    # Arquivos traduzidos (Markdown).
 │           └── correcao/      # Arquivos corrigidos (Markdown).
+├── scripts/
+│   ├── setup_env.sh           # Script para configurar o ambiente do projeto.
+│   ├── run_translation.py     # Orquestra todo o fluxo de tradução.
+│   └── gerar_html.py          # Gera a interface HTML para revisão dos chunks.
+├── src/
+│   ├── split_text.py          # Divide o arquivo de entrada em chunks.
+│   ├── send_to_api.py         # Envia os chunks para tradução via API Dify.
+│   ├── extract_pdf.py         # Extrai o texto de PDF e passa para um TXT
+│   └── correction.py          # Combina o original e a tradução para correção via API.
+│
 │
 ├── requirements.txt           # Dependências do projeto.
 └── README.md                  # Este arquivo.
