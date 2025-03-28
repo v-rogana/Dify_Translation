@@ -7,33 +7,24 @@ from pdf2image import convert_from_path
 import argparse
 
 def normalizar_terminadores_linha(texto: str) -> str:
-    texto = re.sub(r'(\r\n|\r|\n|\u2028|\u2029)', '\n', texto)
-    linhas = [linha.strip() for linha in texto.split('\n')]
-    linhas_normalizadas = []
-    buffer = ""
-    for linha in linhas:
-        if linha == "":
-            if buffer:
-                linhas_normalizadas.append(buffer)
-                buffer = ""
-            linhas_normalizadas.append("")
-        else:
-            if buffer:
-                if buffer[-1] in ".!?,:;" or linha[0].isupper():
-                    linhas_normalizadas.append(buffer)
-                    buffer = linha
-                else:
-                    buffer += " " + linha
-            else:
-                buffer = linha
-    if buffer:
-        linhas_normalizadas.append(buffer)
-    return "\n".join(linhas_normalizadas)
+    """
+    Normaliza as quebras de linha e, se houver poucas quebras duplas,
+    insere novas quebras duplas após sinais de pontuação final seguidos de letra maiúscula.
+    """
+    # Substitui diferentes quebras de linha por \n
+    texto = re.sub(r'(\r\n|\r|\u2028|\u2029)', '\n', texto)
+    # Se houver menos de 5 quebras duplas, insere novas quebras após ponto, interrogação ou exclamação
+    if texto.count('\n\n') < 5:
+        texto = re.sub(r'([.!?])\s+(?=[A-Z])', r'\1\n\n', texto)
+    return texto
 
 def extrair_texto_simples(caminho_pdf: str):
+    """
+    Extrai o texto de cada página do PDF usando PyPDF2.
+    Retorna o texto completo, o número de páginas com texto e o total de páginas.
+    """
     texto_paginas = []
     paginas_com_texto = 0
-    total_paginas = 0
 
     with open(caminho_pdf, 'rb') as arquivo_pdf:
         leitor = PyPDF2.PdfReader(arquivo_pdf)
@@ -51,6 +42,9 @@ def extrair_texto_simples(caminho_pdf: str):
     return texto_extraido, paginas_com_texto, total_paginas
 
 def extrair_texto_com_ocr(caminho_pdf: str, poppler_path: str = None):
+    """
+    Extrai o texto de cada página do PDF utilizando OCR.
+    """
     if poppler_path:
         imagens = convert_from_path(caminho_pdf, dpi=300, poppler_path=poppler_path)
     else:
@@ -82,15 +76,19 @@ def extrair_texto_pdf(caminho_pdf: str, threshold: float = 0.5, poppler_path: st
     return texto_final
 
 def salvar_texto_em_arquivo(texto: str, caminho_txt: str):
+    """
+    Salva o texto extraído em um arquivo TXT.
+    """
     with open(caminho_txt, 'w', encoding='utf-8') as arquivo_txt:
         arquivo_txt.write(texto)
     print(f"Arquivo salvo: {caminho_txt}")
 
 def processar_pdf_para_txt(nome_arquivo_pdf: str, threshold: float = 0.5, poppler_path: str = None):
-    # Definindo a raiz do projeto
-    raiz_projeto = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))  # Caminho para a raiz do projeto
-    
-    # Usando caminhos relativos em relação à raiz do projeto
+    """
+    Processa o PDF para extrair o texto e salvar em um arquivo TXT.
+    Os caminhos de entrada e saída são definidos relativos à raiz do projeto.
+    """
+    raiz_projeto = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
     pasta_entrada = os.path.join(raiz_projeto, "data", "input", "pdf", "original")
     pasta_saida = os.path.join(raiz_projeto, "data", "input", "pdf", "converted")
     
@@ -114,13 +112,15 @@ if __name__ == '__main__':
     # Argumentos de comando
     parser = argparse.ArgumentParser(description="Extrair texto de PDF e salvar em arquivo TXT")
     parser.add_argument('input_pdf', type=str, help="Nome do arquivo PDF de entrada (sem caminho)")
-    parser.add_argument('--threshold', type=float, default=0.5, help="Limite de páginas com texto para considerar OCR (default 50%)")
-    parser.add_argument('--poppler_path', type=str, default=None, help="Caminho para o Poppler (opcional)")
-
+    parser.add_argument('--threshold', type=float, default=0.5,
+                        help="Limite de páginas com texto para considerar OCR (default 50%)")
+    parser.add_argument('--poppler_path', type=str, default=None,
+                        help="Caminho para o Poppler (opcional)")
+    
     args = parser.parse_args()
-
     logging.getLogger("PyPDF2").setLevel(logging.ERROR)
-
-    # Processa o PDF e gera o arquivo de saída na pasta especificada
-    texto_extraido = processar_pdf_para_txt(args.input_pdf, threshold=args.threshold, poppler_path=args.poppler_path)
+    
+    texto_extraido = processar_pdf_para_txt(args.input_pdf,
+                                             threshold=args.threshold,
+                                             poppler_path=args.poppler_path)
     print("\nProcessamento concluído!")

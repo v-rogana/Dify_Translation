@@ -31,6 +31,17 @@ Este projeto automatiza todo o fluxo de tradução, correção e revisão de arq
 ```plaintext
 dify-translator/
 │
+├── data/
+│   └── input/                 # Arquivos de entrada para tradução.
+│     └── pdf/
+│        ├── converted/        # TXTs convertidos
+│        └── original/         # PDFs para serem convertidos
+│     └── txt_original/        # Arquivos originalmente TXT
+│   └── output/                # Saída gerada automaticamente pelo orquestrador.
+│       └── output_<nome>/     # Pasta de saída com:
+│           ├── chunks/        # Chunks de texto gerados.
+│           ├── translated/    # Arquivos traduzidos (Markdown).
+│           └── correcao/      # Arquivos corrigidos (Markdown).
 ├── scripts/
 │   ├── setup_env.sh           # Script para configurar o ambiente do projeto.
 │   ├── run_translation.py     # Orquestra todo o fluxo de tradução.
@@ -38,15 +49,9 @@ dify-translator/
 ├── src/
 │   ├── split_text.py          # Divide o arquivo de entrada em chunks.
 │   ├── send_to_api.py         # Envia os chunks para tradução via API Dify.
-│   └──  correction.py         # Combina o original e a tradução para correção via API.
+│   ├── extract_pdf.py         # Extrai o texto de PDF e passa para um TXT
+│   └── correction.py          # Combina o original e a tradução para correção via API.
 │
-├── data/
-│   ├── input/                 # Arquivos de entrada (TXT) para tradução.
-│   └── output/                # Saída gerada automaticamente pelo orquestrador.
-│       └── output_<nome>/     # Pasta de saída com:
-│           ├── chunks/        # Chunks de texto gerados.
-│           ├── translated/    # Arquivos traduzidos (Markdown).
-│           └── correcao/      # Arquivos corrigidos (Markdown).
 │
 ├── requirements.txt           # Dependências do projeto.
 └── README.md                  # Este arquivo.
@@ -96,7 +101,7 @@ python src/orquestrador.py MeuTexto.txt minhaChaveTraducao minhaChaveCorrecao
 
 > **Nota:** O orquestrador criará automaticamente uma pasta de saída em `data/output/output_<nome_arquivo>` com as subpastas `chunks`, `translated` e `correcao`.
 
-O fluxo para usar o **extract_py** eh colocar o pdf original na pasta `data/input/pdf/original` onde sua verção txt sera armazenada automaticamente em `data/input/pdf/converted`, para utilizar a função deve executar o seguinte comando
+O fluxo para usar o **extract_pdf.py** eh colocar o pdf original na pasta `data/input/pdf/original` onde sua verção txt sera armazenada automaticamente em `data/input/pdf/converted`, para utilizar a função deve executar o seguinte comando
 
 ```bash
 python src/extract_pdf.py <entrada.pdf>
@@ -108,16 +113,29 @@ sendo que o arquivo de entrada deve ser digitado entre aspas, seguindo o exemplo
 python src/extract_pdf.py "La Peculiaridad de lo Estetico Vol. 1.pdf"
 ```
 
+O fluxo para usar o **split_text.py** eh utilizar o comando abaixo com o caminho do txt a ser divido, como por exemplo `data/input/txt_original/{nome_do_txt}`, os arquivos de chunk serão armazenadas em `data/output/output_{nome_do_txt}/chunks`
+
+```bash
+python src/split_text.py <caminho_para_entrada.txt>
+```
+
+O fluxo para usar o **correction.py** eh colocar o mesmo do **generate_html.py**, porem com a alteração do arquivo a ser executado
+
+```bash
+python src/correction.py <caminho_para_a_pasta_output>
+```
+
 ### Revisão e Exportação
 
 1. **Geração do HTML para Revisão:**
    Após a execução do orquestrador, execute o script para gerar a interface HTML:
 
    ```bash
-   python src/gerar_html.py
+   python scripts/gerar_html.py <caminho_para_a_pasta_output>
    ```
 
-   - Ao rodar, informe o caminho da pasta de output (ou utilize o default) para que o HTML seja gerado.
+   ex de uso do comando `scripts>python generate_html.py "data\output\output_teste"`
+
    - No HTML, cada chunk exibirá:
      - **Original:** Texto original.
      - **Tradução:** Texto traduzido.
@@ -177,5 +195,5 @@ Este projeto é licenciado sob a [MIT License](LICENSE).
 
 ## Contribuidores
 
-- [@v-rogana](https://github.com/v-rogana) - Criador e mantenedor principal  
-- [@pdMiranda](https://github.com/pdMiranda) - Melhorias na API de tradução  
+- [@v-rogana](https://github.com/v-rogana) - Criador e mantenedor principal
+- [@pdMiranda](https://github.com/pdMiranda) - Melhorias na API de tradução
